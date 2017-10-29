@@ -8,6 +8,7 @@ import com.iflytek.voiceads.IFLYFullScreenAd;
 
 import android.app.Activity;
 import android.os.Bundle;
+import android.util.Log;
 import android.view.View;
 import android.view.View.OnClickListener;
 import android.view.Window;
@@ -22,8 +23,8 @@ public class MainActivity extends Activity {
 	protected void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
 		requestWindowFeature(Window.FEATURE_NO_TITLE);
-		createAd();
 		setContentView(R.layout.activity_main);
+		createAd();
 		rotate = (Rotate) this.findViewById(R.id.rotate);
         
 		start_btn = (ImageView) this.findViewById(R.id.start_btn);
@@ -47,6 +48,10 @@ public class MainActivity extends Activity {
 	private void createAd() {
 		ad = IFLYFullScreenAd.createFullScreenAd(this,
 				"4C85AAE75D338543F9B2792E2EF8A190");
+		if(ad == null) {
+			Log.e("zhaohui", "IFLYFullScreenAd not initialized !");
+			return;
+		}
 		ad.setAdSize(IFLYAdSize.FULLSCREEN);
 		ad.setParameter(AdKeys.SHOW_TIME_FULLSCREEN, "6000");
 		ad.setParameter(AdKeys.DOWNLOAD_ALERT, "true");
