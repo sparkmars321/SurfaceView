@@ -1,7 +1,5 @@
 package com.anna.surfaceview;
 
-import com.anna.surfaceview.R;
-
 import android.content.Context;
 import android.graphics.Bitmap;
 import android.graphics.BitmapFactory;
@@ -15,7 +13,6 @@ import android.util.TypedValue;
 import android.view.SurfaceHolder;
 import android.view.SurfaceHolder.Callback;
 import android.view.SurfaceView;
-
 
 public class Rotate extends SurfaceView implements Callback, Runnable {
 

@@ -26,21 +26,10 @@
             </intent-filter>
         </activity>
         
-        <activity android:name="com.example.quickindexbar.FullScreenADActivity" />
-        
          <service android:name="com.iflytek.voiceads.update.DownloadService" />
 
         <activity
             android:name="com.iflytek.voiceads.request.IFLYBrowser"
-            android:screenOrientation="portrait" />
-        <activity
-            android:name="com.iflytek.voiceadsdemo.BannerAdActivity"
-            android:screenOrientation="portrait" />
-        <activity
-            android:name="com.iflytek.voiceadsdemo.InterstitialAdActivity"
-            android:screenOrientation="portrait" />
-        <activity
-            android:name="com.iflytek.voiceadsdemo.FullScreenAdActivity"
             android:screenOrientation="portrait" />
         
         <meta-data
